@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dusun</groupId>
-    <artifactId>beluga-mall</artifactId>
+    <artifactId>white-whale</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>beluga-mall</name>
-    <description>白净项目</description>
+    <name>white-whale</name>
+    <description>白鲸项目</description>
     <packaging>pom</packaging>
 
     <modules>
