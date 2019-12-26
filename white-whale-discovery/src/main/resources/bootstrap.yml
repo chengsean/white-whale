@@ -1,0 +1,20 @@
+﻿spring:
+  cloud:
+    config:
+      profile: dev
+      name: serviceregistration
+      uri: http://localhost:8000
+#      fail-fast: true #该标志为true，且无法连接配置服务器的情况下，当前服务会宕机。
+      username: configuration
+      password: PHy34MK81czrzdja
+---
+spring:
+  cloud:
+    config:
+      fetch:
+        fail:
+          retry:
+            initialInterval: 6000 # 重新拉取请求spring.cloud.config.uri初始间隔毫秒数
+            multiplier: 1.8 # 重新拉取请求spring.cloud.config.uri初始间隔毫秒的倍数
+            maxInterval: 20000 # 重新拉取请求spring.cloud.config.uri最大间隔毫秒数
+            maxAttempts: 10 # 重新拉取请求spring.cloud.config.uri最大重试次数

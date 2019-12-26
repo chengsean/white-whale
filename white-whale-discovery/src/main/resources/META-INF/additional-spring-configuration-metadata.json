@@ -1,0 +1,38 @@
+{
+  "properties": [
+    {
+      "name": "spring.cloud.config.fetch.fail.retry.initialInterval",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.config.fetch.fail.retry.initialInterval."
+    },
+    {
+      "name": "spring.cloud.config.fetch.fail.retry.multiplier",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.config.fetch.fail.retry.multiplier."
+    },
+    {
+      "name": "spring.cloud.config.fetch.fail.retry.maxInterval",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.config.fetch.fail.retry.maxInterval."
+    },
+    {
+      "name": "spring.cloud.config.fetch.fail.retry.maxAttempts",
+      "type": "java.lang.String",
+      "description": "Description for spring.cloud.config.fetch.fail.retry.maxAttempts."
+    },
+    {
+      "name": "spring.security.service.registration.provider.id",
+      "type": "java.lang.String",
+      "description": "Description for spring.security.service.registration.provider.id."
+    },
+    {
+      "name": "spring.security.service.registration.provider.secret",
+      "type": "java.lang.String",
+      "description": "Description for spring.security.service.registration.provider.secret."
+    },
+    {
+      "name": "spring.security.service.registration.provider.roles",
+      "type": "java.lang.String",
+      "description": "Description for spring.security.service.registration.provider.roles."
+    }
+  ] }

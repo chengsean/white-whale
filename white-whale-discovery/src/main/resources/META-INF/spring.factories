@@ -1,0 +1,2 @@
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+com.dusun.belugamall.discovery.config.bootstrap.ServiceBootstrapRetryConfig

@@ -1,0 +1,6 @@
+RabbitMQ users=[
+{username=guest,
+password=1Mm85nwyJpk4JS4m}
+,{username=RabbitMQ,
+password=aUIYjMeRl0MGvWhL}
+]

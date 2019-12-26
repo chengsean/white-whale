@@ -1,0 +1,53 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [CONFIGURATION] %p [%t] %C.%M\(%L\) | %m%n
+            </pattern>
+        </layout>
+    </appender>
+    <!-- 生产环境日志路径配置 -->
+    <springProfile name="prod">
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>H:/logs/koala/koala.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <!-- 历史日志文件名称格式 -->
+                <fileNamePattern>H:/logs/configuration/configuration.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <!-- 保留30天历史日志，总大小不超过3GB -->
+                <maxHistory>30</maxHistory>
+                <totalSizeCap>3GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <pattern>%d{yyyy-MM-dd HH:mm:ss} [CONFIGURATION] %p %t %c - %m%n</pattern>
+            </encoder>
+        </appender>
+        // 异步写入日志
+        <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+            <appender-ref ref="FILE" />
+        </appender>
+    </springProfile>
+    <!-- 开发环境日志路径配置 -->
+    <springProfile name="dev">
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>E:/log/koala/koala.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <!-- 历史日志文件名称格式 -->
+                <fileNamePattern>E:/log/configuration/configuration.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <!-- 保留30天历史日志，总大小不超过3GB -->
+                <maxHistory>30</maxHistory>
+                <totalSizeCap>3GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <pattern>%d{yyyy-MM-dd HH:mm:ss} [CONFIGURATION] %p %t %c - %m%n</pattern>
+            </encoder>
+        </appender>
+        // 异步写入日志
+        <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+            <appender-ref ref="FILE" />
+        </appender>
+    </springProfile>
+    <logger name="com.dusun.mall" level="info"/>
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

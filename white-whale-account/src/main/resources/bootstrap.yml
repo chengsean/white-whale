@@ -1,0 +1,16 @@
+server:
+  port: 7749
+spring:
+  application:
+    name: user
+  cloud:
+    bus: #配置bus.id配置客户端才能够重新拉取配置。
+      id: ${vcap.application.name:${spring.application.name:application}}:${vcap.application.instance_index:${spring.cloud.config.profile:${local.server.port:${server.port:0}}}}:${vcap.application.instance_id:${random.value}}
+    config:
+      profile: dev
+      name: user
+      uri: http://localhost:8000
+      fail-fast: true #该标志为true，且无法连接配置服务器的情况下，当前服务会宕机。
+      label: master
+      username: configuration
+      password: PHy34MK81czrzdja

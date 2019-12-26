@@ -1,0 +1,50 @@
+server:
+  port:
+    8000
+spring:
+  profiles:
+    active: dev
+#    active: @profileName@
+  security:
+    user:
+      name: configuration
+#      password: PHy34MK81czrzdja
+      password: '{bcrypt}$2a$10$C4LS2686SFm3O4tCEUUEwOaJdb8nNFj7/IwE2SVREsGWPITZpRi2q'
+      roles: SYSTEM
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+            http://192.168.5.10:3000/chengsean/config-repository
+          basedir:
+            temp/config
+          default-label: master
+      name:
+        configserver
+      uri:
+        http://localhost:8000
+      profile: dev
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: 1Mm85nwyJpk4JS4m
+  redis:
+    host: 192.168.5.10
+    port: 6379
+encrypt:
+  key:
+    QFg0b13tpHJDgl3N
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: monitor
+#        include: '*'
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone:
+#          http://discUser:discPassword@localhost:8000/eureka/

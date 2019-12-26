@@ -1,0 +1,19 @@
+﻿server:
+  port:
+    8761
+spring:
+  redis:
+    host: 192.168.0.101
+    port: 6379
+  profiles:
+    active:
+      dev
+# 该服务为其他服务提供注册的服务，以下配置为禁止自身向自己进行注册
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+    serviceUrl:
+      defaultZone:
+          http://serviceRegistrationProvider:jCjD1t3BQRpvcYvqs7Z@localhost:8761/eureka/

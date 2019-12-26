@@ -1,0 +1,14 @@
+spring:
+  application:
+    name:
+      serviceregistration
+  security:
+    service:
+      registration:
+        provider:
+          id: serviceRegistrationProvider
+          #secret: jCjD1t3BQRpvcYvqs7Z
+          secret: '{bcrypt}$2a$10$AAtTCAcLtG7dhrqnTug57.SYuhd1sKxbph9yuWPI9CeLoL5Pr1N3y'
+          roles: SYSTEM
+
+
