@@ -76,7 +76,7 @@
         </dependencies>
     </dependencyManagement>
     <build>
-        <finalName>beluga-mall-security</finalName>
+        <finalName>white-whale-security</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -2,23 +2,23 @@
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>
-                %d{yyyy-MM-dd HH:mm:ss} [BELUGA-MALL-DISCOVERY] %p [%t] %C.%M\(%L\) | %m%n
+                %d{yyyy-MM-dd HH:mm:ss} [WHITE-WHALE-DISCOVERY] %p [%t] %C.%M\(%L\) | %m%n
             </pattern>
         </layout>
     </appender>
     <!-- 生产环境日志路径配置 -->
     <springProfile name="prod">
         <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <file>H:/logs/beluga-mall/mall-discovery.log</file>
+            <file>H:/logs/white-whale/white-whale-discovery.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <!-- 历史日志文件名称格式 -->
-                <fileNamePattern>H:/logs/beluga-mall/mall-discovery.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <fileNamePattern>H:/logs/white-whale/white-whale-discovery.%d{yyyy-MM-dd}.log</fileNamePattern>
                 <!-- 保留30天历史日志，总大小不超过3GB -->
                 <maxHistory>30</maxHistory>
                 <totalSizeCap>3GB</totalSizeCap>
             </rollingPolicy>
             <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-                <pattern>%d{yyyy-MM-dd HH:mm:ss} [BELUGA-MALL-DISCOVERY] %p %t %c - %m%n</pattern>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss} [WHITE-WHALE-DISCOVERY] %p %t %c - %m%n</pattern>
             </encoder>
         </appender>
         // 异步写入日志
@@ -29,16 +29,16 @@
     <!-- 开发环境日志路径配置 -->
     <springProfile name="dev">
         <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <file>E:/log/beluga-mall/mall-discovery.log</file>
+            <file>E:/log/white-whale/white-whale-discovery.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <!-- 历史日志文件名称格式 -->
-                <fileNamePattern>E:/log/beluga-mall/mall-discovery.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <fileNamePattern>E:/log/white-whale/white-whale-discovery.%d{yyyy-MM-dd}.log</fileNamePattern>
                 <!-- 保留30天历史日志，总大小不超过3GB -->
                 <maxHistory>30</maxHistory>
                 <totalSizeCap>3GB</totalSizeCap>
             </rollingPolicy>
             <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-                <pattern>%d{yyyy-MM-dd HH:mm:ss} [BELUGA-MALL-DISCOVERY] %p %t %c - %m%n</pattern>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss} [WHITE-WHALE-DISCOVERY] %p %t %c - %m%n</pattern>
             </encoder>
         </appender>
         // 异步写入日志

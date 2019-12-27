@@ -1,5 +1,5 @@
 FROM java:8
-ADD beluga-mall-configuration-0.0.1-SNAPSHOT.jar app.jar
+ADD white-whale-configuration-0.0.1-SNAPSHOT.jar app.jar
 VOLUME /tmp
 VOLUME /target
 RUN bash -c 'touch /app.jar'
